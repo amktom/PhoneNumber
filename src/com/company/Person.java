@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.Vector;
 
 public class Person {
-    public static Scanner in = new Scanner(System.in);
+    private static Scanner in = new Scanner(System.in);
     private String name;
     private String phone;
     private static Vector<Person> personList = new Vector<Person>();
@@ -11,11 +11,11 @@ public class Person {
     public Person(String name, String phone) {
         this.name = name;
         this.phone = phone;
-        addPerson(this);
     }
 
     public static void addPerson(Person person) {
         personList.add(person);
+        System.out.print("Контакт добавлен" + "\n");
     }
 
     public static void findPerson(String searchType, String searchString) {
